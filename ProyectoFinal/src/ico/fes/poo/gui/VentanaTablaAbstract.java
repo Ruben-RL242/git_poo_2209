@@ -202,7 +202,16 @@ public class VentanaTablaAbstract extends javax.swing.JFrame {
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         Dinosaurio nuevo= new Dinosaurio();
         if(jTextField1.getText().isEmpty()||jTextField2.getText().equals("")||jTextField3.getText().equals("")||jTextField4.getText().equals("")||jTextField5.getText().equals("")){
-            JOptionPane.showMessageDialog(this, "Favor de NO dejar ningun campo vacio");
+        if(jTextField1.getText().isEmpty())
+            JOptionPane.showMessageDialog(this, "El campo nombre es obligatorio");
+        if(jTextField2.getText().isEmpty())
+            JOptionPane.showMessageDialog(this, "El campo especie es obligatorio");
+        if(jTextField3.getText().isEmpty())
+            JOptionPane.showMessageDialog(this, "El campo peso el obligatorio");
+        if(jTextField4.getText().isEmpty())
+            JOptionPane.showMessageDialog(this, "el campo color es obligatorio");
+        if(jTextField5.getText().isEmpty())
+            JOptionPane.showMessageDialog(this, "El campo numero de patas es obligatorio");
         }
         else{
             nuevo.setNombre(jTextField1.getText());
